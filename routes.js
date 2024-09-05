@@ -1,4 +1,5 @@
 import express from "express";
+import clients from "./src/controllers/clients.js";
 
 const routes = express.Router();
 
@@ -19,5 +20,7 @@ routes.post('/login', (req, res, next) => {
  
   res.status(500).json({message: 'Login inválido!'});
 });
+
+routes.get("/clients", clients.findAll);
 
 export { routes as default };
