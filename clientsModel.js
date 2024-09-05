@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import db from "../db.js";
+import db from "./db.js";
 
 export default db.define("client", {
   id: {
@@ -16,7 +16,7 @@ export default db.define("client", {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
-  
+
   email: {
     type: Sequelize.STRING,
     allowNull: false,
