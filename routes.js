@@ -13,7 +13,7 @@ routes.post('/login', async (req, res, next) => {
     const { user, password } = req.body;
 
     // Fazendo a consulta no banco de dados
-    const userRecord = await user.findOne({ where: { username: user } });
+    const userRecord = await user.findAll({ where: { username: user } });
 
     // Se o usuário não for encontrado
     if (!userRecord) {
