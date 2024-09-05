@@ -27,7 +27,7 @@ routes.post('/login', async (req, res, next) => {
 
     return res.json({ auth: true, token: token });
   } catch (error) {
-    return next(error);
+    return next(error); // Lida com possíveis erros
   }
 });
 
